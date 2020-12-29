@@ -1,22 +1,23 @@
-const videoElement = document.getElementById('video')
-const button = document.getElementById('button')
+const videoElement = document.getElementById('video');
+const openTabsButton = document.getElementById('open-tabs-button');
+const startButton = document.getElementById('start-button');
 
 async function selectMediaStream() {
-    try {
-        const mediaStream = await navigator.mediaDevices.getDisplayMedia()
-        videoElement.srcObject = mediaStream
-        videoElement.onloadedmetadata = () => {
-            videoElement.play()
-        }
-    } catch (error) {
-        console.log(error)
-    }
+	try {
+		const mediaStream = await navigator.mediaDevices.getDisplayMedia();
+		videoElement.srcObject = mediaStream;
+		videoElement.onloadedmetadata = () => {
+			videoElement.play();
+		};
+	} catch (error) {
+		console.log(error);
+	}
 }
 
-button.addEventListener('click', async () => {
-    button.disabled = true 
-    await videoElement.requestPictureInPicture()
-    button.disabled = false
-})
+startButton.addEventListener('click', async () => {
+	button.disabled = true;
+	await videoElement.requestPictureInPicture();
+	button.disabled = false;
+});
 
-selectMediaStream()
+openTabsButton.addEventListener('click', selectMediaStream);

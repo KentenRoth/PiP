@@ -14,6 +14,10 @@ body {
 	font-family: Playfair Display, sans-serif;
 }
 
+.top-button {
+	margin-bottom: 10px;
+}
+
 button {
 	background: #b0b7bc;
 	border: none;
