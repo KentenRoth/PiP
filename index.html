@@ -13,15 +13,36 @@
 		<link rel="stylesheet" href="style.css" />
 	</head>
 	<body>
-		<video id="video" controls height="360" width="640" hidden></video>
-
-		<div class="button-container">
-			<div class="top-button">
-				<button id="open-tabs-button">Get Open Tabs</button>
+		<div class="container">
+			<div class="how-to-container">
+				<div>
+					<h2>How it works</h2>
+				</div>
+				<p>
+					Click 'Get Open Tabs' button
+					<br />
+					Select tab you want in PiP
+					<br />
+					Click 'Start PiP'
+				</p>
 			</div>
+			<video id="video" controls height="360" width="640" hidden></video>
 
-			<button id="start-button">Start PiP</button>
+			<div class="button-container">
+				<div class="top-button">
+					<button id="open-tabs-button">Get Open Tabs</button>
+				</div>
+
+				<button id="start-button">Start PiP</button>
+			</div>
+			<div>
+				<p>
+					The browser needs approval to screen recording for PiP to
+					work.
+				</p>
+			</div>
 		</div>
+
 		<script src="script.js"></script>
 	</body>
 </html>
