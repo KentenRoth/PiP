@@ -1,6 +1,6 @@
 const videoElement = document.getElementById('video');
 const openTabsButton = document.getElementById('open-tabs-button');
-const startButton = document.getElementById('start-button');
+const startButton = document.getElementById('button');
 
 async function selectMediaStream() {
 	try {
@@ -15,9 +15,9 @@ async function selectMediaStream() {
 }
 
 startButton.addEventListener('click', async () => {
-	button.disabled = true;
+	startButton.disabled = true;
 	await videoElement.requestPictureInPicture();
-	button.disabled = false;
+	startButton.disabled = false;
 });
 
 openTabsButton.addEventListener('click', selectMediaStream);
